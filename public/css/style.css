@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'Futura';
-    src: url('fonts/Futura-Bold.woff2') format('woff2'),
-        url('fonts/Futura-Bold.woff') format('woff');
+    src: url('../fonts/Futura-Bold.woff2') format('woff2'),
+        url('../fonts/Futura-Bold.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Futura Bk BT';
-    src: url('fonts/FuturaBT-Book.woff2') format('woff2'),
-        url('fonts/FuturaBT-Book.woff') format('woff');
+    src: url('../fonts/FuturaBT-Book.woff2') format('woff2'),
+        url('../fonts/FuturaBT-Book.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -322,7 +322,7 @@ nav .logo-titel svg {
 .yt-item .play {
     grid-row: 1 / 3;
     grid-column: 1;
-    background-image: url(images/controls/play.svg);
+    background-image: url(../images/controls/play.svg);
     width: 24px;
     height: 24px;
     margin: 5px;
@@ -334,7 +334,7 @@ nav .logo-titel svg {
 }
 
 .pre-programma .yt-item .play {
-    background-image: url(images/controls/play-alt.svg);
+    background-image: url(../images/controls/play-alt.svg);
 }
 
 
