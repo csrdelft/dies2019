@@ -15,19 +15,20 @@
 }
 
 :root {
-    --kleur-oranje: #E9600B;
     --kleur-groen: #368C70;
+    --kleur-blauw-donker: #0A4F51;
+    --kleur-oranje: #E9600B;
     --kleur-beige: #F2EBC7;
-    --kleur-donker: #0A4F51;
+    --kleur-blauw : #197173;
+    --kleur-rood: #C33A3A;
+    --kleur-rood-donker: #5A1C1C;
 
     --font-color: var(--kleur-beige);
 
-    --onderkant-header: rgba(25,113,115,0.5);
-
-    --achtergrond-titel: #197173;
-    --achtergrond-programma: var(--kleur-donker);
-    --achtergrond-motown: #C33A3A;
-    --achtergrond-etiquette: #5A1C1C;
+    --achtergrond-titel: var(--kleur-blauw);
+    --achtergrond-programma: var(--kleur-blauw-donker);
+    --achtergrond-motown: var(--kleur-rood);
+    --achtergrond-etiquette: var(--kleur-rood-donker);
     --achtergrond-galadate: var(--kleur-beige);
     --tekst-galadate: var(--kleur-groen);   
 
@@ -89,8 +90,6 @@ section {
 
 nav {
     background-color: var(--achtergrond-titel);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
 }
 
 nav .bottom-border {
@@ -98,7 +97,8 @@ nav .bottom-border {
     position: absolute;
     bottom: -5px;
     height: 5px;
-    background-color: rgba(25,113,115,0.3);
+    opacity: 0.3;
+    background-color: inherit;
 }
 
 nav a {
@@ -185,87 +185,66 @@ nav .logo-titel svg {
 /* burst instellingen */
 .burst .ray:nth-child(1) {
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -1);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 .burst .ray:nth-child(2) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -2);
-    /* animation-duration: calc(var(--animation-duration-base) * 1); */
 }
 .burst .ray:nth-child(3) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -3);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 .burst .ray:nth-child(4) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -4);
-    /* animation-duration: calc(var(--animation-duration-base) * 1); */
 }
 .burst .ray:nth-child(5) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -5);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 .burst .ray:nth-child(6) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -6);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 .burst .ray:nth-child(7) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -7);
-    /* animation-duration: calc(var(--animation-duration-base) * 1); */
 }
 .burst .ray:nth-child(8) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -8);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 .burst .ray:nth-child(9) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -9);
-    /* animation-duration: calc(var(--animation-duration-base) * 1); */
 }
 .burst .ray:nth-child(10) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -10);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 .burst .ray:nth-child(11) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -11);
-    /* animation-duration: calc(var(--animation-duration-base) * 1); */
 }
 .burst .ray:nth-child(12) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -12);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 .burst .ray:nth-child(13) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -13);
-    /* animation-duration: calc(var(--animation-duration-base) * 1); */
 }
 .burst .ray:nth-child(14) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -14);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 .burst .ray:nth-child(15) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -15);
-    /* animation-duration: calc(var(--animation-duration-base) * 1); */
 }
 .burst .ray:nth-child(16) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -16);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 .burst .ray:nth-child(17) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -17);
-    /* animation-duration: calc(var(--animation-duration-base) * 1); */
 }
 .burst .ray:nth-child(18) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -18);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 .burst .ray:nth-child(19) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -19);
-    /* animation-duration: calc(var(--animation-duration-base) * 1); */
 }
 .burst .ray:nth-child(20) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -20);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 .burst .ray:nth-child(21) { 
     animation-delay: calc(var(--animation-duration-base) / var(--num-rays) * -21);
-    /* animation-duration: calc(var(--animation-duration-base) * 1.05); */
 }
 @keyframes rotate1 {
     from { transform: rotate(0deg); }
@@ -277,7 +256,7 @@ nav .logo-titel svg {
 .head {
     height: 670px;
     padding: 0;
-    background-color: var(--kleur-donker);
+    background-color: var(--kleur-blauw-donker);
 }
 
 .video {
@@ -347,7 +326,7 @@ nav .logo-titel svg {
 }
 
 .pre-programma .yt-item {
-    color: var(--kleur-donker);
+    color: var(--kleur-blauw-donker);
 }
 
 .pre-programma .yt-item .play {
@@ -358,11 +337,11 @@ nav .logo-titel svg {
 /* buttons */
 .btn-primary {
     color: white;
-    background-color: var(--kleur-donker);
+    background-color: var(--kleur-blauw-donker);
 }
 
 .btn-primary:not(:disabled):not(.disabled):active {
-    background-color: var(--kleur-donker);
+    background-color: var(--kleur-blauw-donker);
 }
 
 .btn-primary:hover {
