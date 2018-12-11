@@ -15,9 +15,7 @@
 </head>
 
 <body>
-
   <div id="player" class="d-none"></div>
-
   <nav class="site-header sticky-top py-1">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="logo-titel" href="#">
@@ -74,7 +72,7 @@
       <!-- Halfdoorzichtige rand
         <path d="M 1790.4389,0 A 1790.4383,1756.2517 0 0 0 0,1756.2523 1790.4383,1756.2517 0 0 0 1790.4389,3512.5046 1790.4383,1756.2517 0 0 0 3580.8777,1756.2523 1790.4383,1756.2517 0 0 0 1790.4389,0 Z m 1.1458,1709.3629 a 48.173404,47.253586 0 0 1 48.1721,47.2541 48.173404,47.253586 0 0 1 -48.1721,47.2543 48.173404,47.253586 0 0 1 -48.1743,-47.2543 48.173404,47.253586 0 0 1 48.1743,-47.2541 z"
         style="opacity:0.3;fill:#000000;fill-opacity:1;" /> -->
-      <image xlink:href="images/logo.svg" clip-path="url(#vinyl)" x="283.29498" y="247.49956" width="3020" height="3020"  />
+      <image xlink:href="images/logo.svg" clip-path="url(#vinyl)" x="283.29498" y="247.49956" width="3020" height="3020" />
       <image xlink:href="images/vinyl-achtergrond.jpg" clip-path="url(#vinyl)" x="271.29498" y="237.49956" width="3040"
         height="3038" style="mix-blend-mode:screen" />
     </svg>
@@ -84,7 +82,7 @@
   <section class="video">
     <div class="container">
       <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/80744790?autoplay=1&loop=1"
+        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/80744790"
           frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
@@ -94,6 +92,8 @@
     <div class="container">
       <h2>Programma</h2>
 
+      <Player></Player>
+
       <!-- player -->
     </div>
   </section>
@@ -101,35 +101,43 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <h3>Donderdag<span class="datum">20-12</span></h3>
-          <div class="yt-item">
+          <h4>Donderdag <span class="datum">20-12</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">Themabekendmaking</div>
+            </div>
           </div>
         </div>
         <div class="col">
-          <h3>Donderdag<span class="datum">20-12</span></h3>
-          <div class="yt-item">
+          <h4>Donderdag <span class="datum">10-01</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">Too Many Fish In The Sea</div>
+              <div class="beschrijving">Galadatingsborrel</div>
+            </div>
           </div>
         </div>
         <div class="col">
-          <h3>Donderdag<span class="datum">20-12</span></h3>
-          <div class="yt-item">
+          <h4>Maandag <span class="datum">21&28-01</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">Dancing in the street</div>
+              <div class="beschrijving">Danslessen</div>
+            </div>
           </div>
         </div>
         <div class="col">
-          <h3>Donderdag<span class="datum">20-12</span></h3>
-          <div class="yt-item">
+          <h4>Zondag <span class="datum">03-02</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">You’re The One For Me</div>
+              <div class="beschrijving">Jurkenruil met DéDé</div>
+            </div>
           </div>
         </div>
       </div>
@@ -139,183 +147,257 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <h3>Dinsdag<span class="datum">12-02</span></h3>
-          <div class="yt-item">
+          <h4>Dinsdag <span class="datum">12-02</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">17:00 Openingsdiner</div>
+            </div>
           </div>
-          <div class="yt-item">
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">20:00 Laudate et Orate</div>
+            </div>
           </div>
-          <div class="yt-item">
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">22:00 Borrel</div>
+            </div>
           </div>
-          <div class="yt-item">
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">22:30 Debat</div>
+            </div>
           </div>
 
-          <h3>Woensdag<span class="datum">13-02</span></h3>
-          <div class="yt-item">
+          <h4>Woensdag <span class="datum">13-02</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">14:00 Receptie extern</div>
+            </div>
           </div>
-          <div class="yt-item">
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">20:00 Receptie intern</div>
+            </div>
           </div>
-          <div class="yt-item">
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">20:30 Kostuums van Gents</div>
+            </div>
           </div>
-          <div class="yt-item">
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">22:00 Borrel</div>
+            </div>
           </div>
+          <div class="yt-item media">
+              <div class="play"></div>
+              <div class="media-body">
+                <div class="titel">I'm coming out</div>
+                <div class="beschrijving">22:30 Debat</div>
+              </div>
+            </div>
         </div>
         <div class="col">
-          <h3>Donderdag<span class="datum">14-02</span></h3>
-          <div class="yt-item">
+          <h4>Donderdag <span class="datum">14-02</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">19:00 Lezing</div>
+            </div>
           </div>
-          <div class="yt-item">
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-
-          <h3>Vrijdag<span class="datum">15-02</span></h3>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">21:00 Feest</div>
+            </div>
           </div>
 
-          <h3>Zaterdag<span class="datum">16-02</span></h3>
-          <div class="yt-item">
+          <h4>Vrijdag <span class="datum">15-02</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">10:00 Ontbijt aan huis</div>
+            </div>
+          </div>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">16:00 VrijMiBo</div>
+            </div>
+          </div>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">22:00 Borrel</div>
+            </div>
+          </div>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">22:30 Debat</div>
+            </div>
           </div>
 
-          <h3>Zondag<span class="datum">17-02</span></h3>
-          <div class="yt-item">
+          <h4>Zaterdag <span class="datum">16-02</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-        </div>
-
-        <div class="col">
-          <h3>Maandag<span class="datum">18-02</span></h3>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">14:00 Brusjesdag</div>
+            </div>
           </div>
 
-          <h3>Dinsdag<span class="datum">19-02</span></h3>
-          <div class="yt-item">
+          <h4>Zondag <span class="datum">17-02</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">11:00 Kerkplan</div>
+            </div>
           </div>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-
-          <h3>Weonsdag<span class="datum">20-02</span></h3>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
+          <div class="yt-item media">
+              <div class="play"></div>
+              <div class="media-body">
+                <div class="titel">I'm coming out</div>
+                <div class="beschrijving">12:30 Taart en lunch</div>
+              </div>
+            </div>
         </div>
 
         <div class="col">
-          <h3>Donderdag<span class="datum">21-02</span></h3>
-          <div class="yt-item">
+          <h4>Maandag <span class="datum">18-02</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">18:00 Van Speijk diner</div>
+            </div>
           </div>
-          <div class="yt-item">
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
-          </div>
-
-          <h3>Vrijdag<span class="datum">22-02</span></h3>
-          <div class="yt-item">
-            <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">20:15 Installatie H.V.</div>
+            </div>
           </div>
 
-          <h3>Zaterdag<span class="datum">23-02</span></h3>
-          <div class="yt-item">
+          <h4>Dinsdag <span class="datum">19-02</span></h4>
+          <div class="yt-item media">
             <div class="play"></div>
-            <div class="titel">I'm coming out</div>
-            <div class="beschrijving">Themabekendmaking</div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">20:00 Op de planken</div>
+            </div>
+          </div>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">22:00 Borrel</div>
+            </div>
+          </div>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">22:30 Debat</div>
+            </div>
+          </div>
+
+          <h4>Weonsdag <span class="datum">20-02</span></h4>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">16:00 Klus je corsage</div>
+            </div>
+          </div>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">18:00 Hartige Maaltijd</div>
+            </div>
+          </div>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">22:00 Plaatje draaien</div>
+            </div>
+          </div>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">22:30 Debat</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <h4>Donderdag <span class="datum">21-02</span></h4>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">20:00 Vrijwillige kring</div>
+            </div>
+          </div>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">22:00 Borrel</div>
+            </div>
+          </div>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">22:30 Debat</div>
+            </div>
+          </div>
+
+          <h4>Vrijdag <span class="datum">22-02</span></h4>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">16:00 Gala</div>
+            </div>
+          </div>
+
+          <h4>Zaterdag <span class="datum">23-02</span></h4>
+          <div class="yt-item media">
+            <div class="play"></div>
+            <div class="media-body">
+              <div class="titel">I'm coming out</div>
+              <div class="beschrijving">13:00 Dede brunch</div>
+            </div>
           </div>
         </div>
       </div>
@@ -375,7 +457,7 @@
           tijdens de Dies uw penning te dragen op Confide. Eerstejaars zullen deze ontvangen op de dies H.V. als ze
           geïnstalleerd worden. Op het gala hoeft u uw penning niet te dragen.</p>
 
-        <h3>Voorbereidingen voor het Gala</h3>
+        <h4>Voorbereidingen voor het Gala</h3>
         <h4>Uitnodigingen</h4>
 
         <p>De heer vraagt de dame in een brief, handgeschreven met zilveren pen op blauw papier, of zij hem wil
