@@ -58,6 +58,13 @@
                 }
             }
             this.player.cueVideoById(this.currentSong.ytId, this.currentSong.start);
+
+            // .yt-item nodes zitten in de html omdat ze dan sneller geladen worden
+            document.querySelectorAll('.yt-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    this.play(this.playlist.find(s => s.id === item.id));
+                })
+            })
         },
         mounted() {
             this.scrollTo(this.currentSong, 0);
@@ -74,7 +81,7 @@
                 return this.playlist.indexOf(song);
             },
             playNextSong() {
-                if (this.songIndex > this.playlist.length) {
+                if (this.songIndex >= this.playlist.length - 1) {
                     this.play(this.playlist[0]);
                 } else {
                     this.play(this.playlist[this.songIndex + 1]);
@@ -114,7 +121,18 @@
                     .to(record.$el, 0, {opacity: 1})
                     .to(record.$el, 0.5, {top: 250});
             },
+            updatePlayButtons(song) {
+                let previous = document.querySelectorAll(".playing");
+                previous.forEach(prev => prev.classList.remove("playing"));
+
+                if (this.currentSong !== song || !this.isPlaying) {
+                    let element = document.getElementById(song.id);
+                    element.querySelector(".play").classList.add("playing");
+                }
+            },
             play(song) {
+                this.updatePlayButtons(song);
+
                 if (this.currentSong !== song) {
                     this.currentSong = song;
                     this.player.loadVideoById(song.ytId, song.start);
