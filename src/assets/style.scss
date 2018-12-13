@@ -58,13 +58,27 @@ h4 {
   font-size: 1.2rem;
 }
 
+p {
+  line-height: 1.8;
+}
+
 /* drie kolommen op grote schermen, twee kolommon op gemiddelde schermen, één kolom op mobiel */
 .fluid-columns {
   column-count: 3;
+
+  & > * {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }
 
 .fluid-columns-4 {
   column-count: 4;
+
+  & > * {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }
 
 @media (max-width: 992px) { /* lg */
@@ -97,7 +111,7 @@ a.anchor {
 }
 
 p.heavy {
-  font-weight: bold;
+  font-family: Futura, sans-serif;
 }
 
 section {
@@ -268,7 +282,6 @@ nav {
   color: $achtergrond-programma;
   min-height: 100vh;
 }
-
 
 /* video */
 .video iframe {
