@@ -10,18 +10,20 @@
                   :distance="Math.abs(songIndex - i)"
                   @play="play(song)"/>
         </div>
-        <Controls :beschrijving="currentSong.beschrijving" :titel="currentSong.titel" @next="playNextSong" @previous="playPreviousSong"></Controls>
+
+        <Controls :beschrijving="currentSong.beschrijving" :titel="currentSong.titel" @next="playNextSong"
+                  @previous="playPreviousSong"></Controls>
     </div>
 </template>
 
 <script>
-    import Song from './components/Song.vue'
-    import Record from './components/Record'
     import YoutubePlayer from 'youtube-player'
-    import PlayerStates from './PlayerStates'
-    import playlist from './playlist.js'
-    import Controls from './components/Controls'
     import {TimelineLite, Power2} from 'gsap'
+    import Song from './components/Song'
+    import Record from './components/Record'
+    import PlayerStates from './PlayerStates'
+    import playlist from './playlist'
+    import Controls from './components/Controls'
 
     export default {
         name: 'app',
@@ -38,26 +40,40 @@
                 return -this.songIndex * 360;
             }
         },
-        async created() {
-            this.player = YoutubePlayer('yt-player');
+        created() {
             this.player.on('stateChange', (event) => {
                 if (event.data === PlayerStates.ENDED) {
                     this.playNextSong();
                 }
 
-                this.isPlaying = event.data === PlayerStates.PLAYING;
-            })
+                this.isPlaying = event.data === PlayerStates.PLAYING || event.data === PlayerStates.BUFFERING;
+            });
 
-            // this.player.getPlaylist().then(console.log);
+            let now = new Date();
+
+            for (let i = this.playlist.length; i-- > 0; ) {
+               if (this.playlist[i].moment < now) {
+                   this.currentSong = this.playlist[i];
+                   break;
+               }
+            }
+
+            this.player.cueVideoById(this.currentSong.ytId, this.currentSong.start);
+        },
+        mounted() {
+            this.scrollTo(this.currentSong, 0);
         },
         data: () => ({
-            player: {},
+            player: YoutubePlayer('yt-player'),
             playlist: playlist,
-            currentSong: playlist[0],
+            currentSong: null,
             timeline: new TimelineLite(),
             isPlaying: false,
         }),
         methods: {
+            getSongIndex(song) {
+                return this.playlist.indexOf(song);
+            },
             playNextSong() {
                 if (this.songIndex > this.playlist.length) {
                     this.play(this.playlist[0]);
@@ -72,40 +88,53 @@
                     this.play(this.playlist[this.songIndex - 1]);
                 }
             },
-            play(song) {
-                const {record, tracks} = this.$refs;
+            async skip() {
+                this.player.seekTo(await this.player.getDuration() - 5, true);
+            },
+            scrollTo(song, duration = 1) {
+                const {tracks} = this.$refs;
 
-                if (this.currentSong === song) {
+                this.timeline
+                    .to(tracks, duration, {
+                        left: this.getSongIndex(song) * -360,
+                        ease: Power2.easeInOut
+                    });
+            },
+            hideRecord() {
+                const {record} = this.$refs;
+
+                this.timeline
+                    .to(record.$el, 0.2, {top: 350})
+                    .to(record.$el, 0, {opacity: 0});
+
+            },
+            showRecord() {
+                const {record} = this.$refs;
+
+                this.timeline
+                    .to(record.$el, 0, {opacity: 1})
+                    .to(record.$el, 0.5, {top: 250});
+            },
+            play(song) {
+                if (this.currentSong !== song) {
+                    this.currentSong = song;
+                    this.player.loadVideoById(song.ytId, song.start);
+
+                    this.timeline.clear();
+                    this.hideRecord();
+                    this.scrollTo(song);
+                    this.showRecord();
+                } else {
                     if (this.isPlaying) {
                         this.player.pauseVideo();
 
-                        this.timeline
-                            .clear()
-                            .to(record.$el, 0.2, {top: 350});
-
-                        return;
+                        this.hideRecord();
                     } else {
-                        this.timeline
-                            .clear()
-                            .to(record.$el, 0.5, {top: 250});
-
                         this.player.playVideo();
-                        return;
+
+                        this.showRecord();
                     }
                 }
-
-                this.currentSong = song;
-                this.player.loadVideoById(song.ytId, song.start);
-
-                this.timeline
-                    .clear()
-                    .to(record.$el, 0.2, {top: 350})
-                    .to(record.$el, 0, {opacity: 0}).to(tracks, 1, {
-                        left: this.tracksLeftPos,
-                        ease: Power2.easeInOut
-                    })
-                    .to(record.$el, 0, {opacity: 1})
-                    .to(record.$el, 0.5, {top: 250});
             },
         }
     }

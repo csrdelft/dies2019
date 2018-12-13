@@ -23,6 +23,7 @@
     .controls {
         display: flex;
         justify-content: center;
+        align-items: flex-start;
     }
 
     .previous, .text, .next {
@@ -34,8 +35,12 @@
     }
 
     .text {
+        margin-top: 1.25em;
+        width: 16em;
         text-align: center;
+    }
 
+    .titel, .beschrijving {
         font-size: 1.5rem;
     }
 

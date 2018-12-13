@@ -21,7 +21,8 @@
 
 <style scoped>
     svg {
-        top: 250px;
+        top: 350px;
+        opacity: 0;
         width: 350px;
         height: 350px;
         position: relative;
