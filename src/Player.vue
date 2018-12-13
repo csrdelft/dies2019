@@ -18,7 +18,7 @@
 
 <script>
     import YoutubePlayer from 'youtube-player'
-    import {TimelineLite, Power2} from 'gsap'
+    import {Power2, TimelineLite} from 'gsap'
     import Song from './components/Song'
     import Record from './components/Record'
     import PlayerStates from './PlayerStates'
@@ -49,15 +49,14 @@
                 this.isPlaying = event.data === PlayerStates.PLAYING || event.data === PlayerStates.BUFFERING;
             });
 
-            let now = new Date();
-
-            for (let i = this.playlist.length; i-- > 0; ) {
-               if (this.playlist[i].moment < now) {
-                   this.currentSong = this.playlist[i];
-                   break;
-               }
+            // currentSong is de eerste activiteit die nog niet is afgelopen of de allerlaatste activiteit
+            this.currentSong = this.playlist.slice(-1)[0];
+            for (let song of this.playlist) {
+                if (song.moment > new Date()) {
+                    this.currentSong = song;
+                    break;
+                }
             }
-
             this.player.cueVideoById(this.currentSong.ytId, this.currentSong.start);
         },
         mounted() {
