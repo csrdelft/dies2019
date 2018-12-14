@@ -1,5 +1,8 @@
 <template>
-    <div :class="className" @click="$emit('play')">
+    <div :class="className"
+         @click="$emit('play')"
+         @mouseover="active = true"
+         @mouseleave="active = false">
         <img :src="cover" alt=""/>
     </div>
 </template>

@@ -8,11 +8,19 @@
                   :beschrijving="song.beschrijving"
                   :cover="song.cover"
                   :distance="Math.abs(songIndex - i)"
+                  :currentSong="currentSong === song"
+                  :playing="isPlaying"
                   @play="play(song)"/>
         </div>
 
-        <Controls :beschrijving="currentSong.beschrijving" :titel="currentSong.titel" @next="playNextSong"
-                  @previous="playPreviousSong"></Controls>
+        <Controls :beschrijving="currentSong.beschrijving"
+                  :titel="currentSong.titel"
+                  :is-playing="isPlaying"
+                  :is-buffering="isBuffering"
+                  :is-moving="isMoving"
+                  @play="playCurrentSong"
+                  @next="playNextSong"
+                  @previous="playPreviousSong" />
     </div>
 </template>
 
@@ -46,7 +54,8 @@
                     this.playNextSong();
                 }
 
-                this.isPlaying = event.data === PlayerStates.PLAYING || event.data === PlayerStates.BUFFERING;
+                this.isPlaying = event.data === PlayerStates.PLAYING;
+                this.isBuffering = event.data === PlayerStates.BUFFERING;
             });
 
             // currentSong is de eerste activiteit die nog niet is afgelopen of de allerlaatste activiteit
@@ -75,10 +84,15 @@
             currentSong: null,
             timeline: new TimelineLite(),
             isPlaying: false,
+            isBuffering: false,
+            isMoving: false,
         }),
         methods: {
             getSongIndex(song) {
                 return this.playlist.indexOf(song);
+            },
+            playCurrentSong() {
+                this.play(this.currentSong);
             },
             playNextSong() {
                 if (this.songIndex >= this.playlist.length - 1) {
@@ -101,10 +115,12 @@
                 const {tracks} = this.$refs;
 
                 this.timeline
+                    .call(() => this.isMoving = true)
                     .to(tracks, duration, {
                         left: this.getSongIndex(song) * -360,
                         ease: Power2.easeInOut
-                    });
+                    })
+                    .call(() => this.isMoving = false);
             },
             hideRecord() {
                 const {record} = this.$refs;
@@ -142,7 +158,7 @@
                     this.scrollTo(song);
                     this.showRecord();
                 } else {
-                    if (this.isPlaying) {
+                    if (this.isPlaying || this.isBuffering) {
                         this.player.pauseVideo();
 
                         this.hideRecord();
