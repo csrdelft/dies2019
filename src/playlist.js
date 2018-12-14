@@ -7,7 +7,7 @@ export default [
         beschrijving: "Themabekendmaking",
         ytId: "zbYcte4ZEgQ",
         start: 0,
-        cover: "images/covers/I'm Coming Out.jpg"
+        cover: "images/covers/i'm coming out.jpg"
     },
     {
         id: "galadatingsborrel-10",
@@ -16,7 +16,7 @@ export default [
         beschrijving: "Galadatingsborrel",
         ytId: "MJ5RKG2FqGo",
         start: 0,
-        cover: "images/covers/Too Many Fish In The Sea.jpg"
+        cover: "images/covers/too many fish in the sea.jpg"
     },
     {
         id: "danslessen-28",
@@ -25,7 +25,7 @@ export default [
         beschrijving: "Danslessen",
         ytId: "CdvITn5cAVc",
         start: 0,
-        cover: "images/covers/Dancing in the streets.jpg"
+        cover: "images/covers/dancing in the streets.jpg"
     },
     {
         id: "jurkenruil-met-dede-3",
@@ -34,7 +34,7 @@ export default [
         beschrijving: "Jurkenruil met DéDé",
         ytId: "gdqtmnd2T0U",
         start: 0,
-        cover: "images/covers/You're all I need.jpg"
+        cover: "images/covers/you're all i need.jpg"
     },
     {
         id: "openingsdiner-12",
@@ -43,7 +43,7 @@ export default [
         beschrijving: "Openingsdiner",
         ytId: "3j3okb3kuts",
         start: 0,
-        cover: "images/covers/Let's Get It On.jpg"
+        cover: "images/covers/let's get it on.jpg"
     },
     {
         id: "laudate-et-orate-12",
@@ -52,7 +52,7 @@ export default [
         beschrijving: "Laudate et Orate",
         ytId: "KtBbyglq37E",
         start: 0,
-        cover: "images/covers/I Say A Little Prayer.jpg"
+        cover: "images/covers/i say a little prayer.jpg"
     },
     {
         id: "borrel-12",
@@ -61,7 +61,7 @@ export default [
         beschrijving: "Borrel",
         ytId: "AVrDdrLZTa8",
         start: 0,
-        cover: "images/covers/Rhythm Of The Night.jpg"
+        cover: "images/covers/rhythm of the night.jpg"
     },
     {
         id: "debat-12",
@@ -70,7 +70,7 @@ export default [
         beschrijving: "Debat",
         ytId: "bCnGFtS4iC4",
         start: 0,
-        cover: "images/covers/He Was Really Saying Something.jpg"
+        cover: "images/covers/he was really saying something.jpg"
     },
     {
         id: "receptie-extern-13",
@@ -79,7 +79,7 @@ export default [
         beschrijving: "Receptie extern",
         ytId: "Qwscb3QIVSg",
         start: 0,
-        cover: "images/covers/Happy Birthday.jpg"
+        cover: "images/covers/happy birthday.jpg"
     },
     {
         id: "receptie-intern-13",
@@ -88,7 +88,7 @@ export default [
         beschrijving: "Receptie intern",
         ytId: "xIrLg4YsXfA",
         start: 0,
-        cover: "images/covers/Open Invitation.jpg"
+        cover: "images/covers/open invitation.jpg"
     },
     {
         id: "kostuums-van-gents-13",
@@ -97,7 +97,7 @@ export default [
         beschrijving: "Kostuums van Gents",
         ytId: "AQGXa3FiXKM",
         start: 0,
-        cover: "images/covers/Shop Around.jpg"
+        cover: "images/covers/shop around.jpg"
     },
     {
         id: "borrel-13",
@@ -106,7 +106,7 @@ export default [
         beschrijving: "Borrel",
         ytId: "AVrDdrLZTa8",
         start: 0,
-        cover: "images/covers/Rhythm Of The Night.jpg"
+        cover: "images/covers/rhythm of the night.jpg"
     },
     {
         id: "debat-13",
@@ -115,7 +115,7 @@ export default [
         beschrijving: "Debat",
         ytId: "bCnGFtS4iC4",
         start: 0,
-        cover: "images/covers/He Was Really Saying Something.jpg"
+        cover: "images/covers/he was really saying something.jpg"
     },
     {
         id: "lezing-14",
@@ -124,7 +124,7 @@ export default [
         beschrijving: "Lezing",
         ytId: "Vnrzn4EZgzE",
         start: 0,
-        cover: "images/covers/ABC.jpg"
+        cover: "images/covers/abc.jpg"
     },
     {
         id: "feest-14",
@@ -133,7 +133,7 @@ export default [
         beschrijving: "Feest",
         ytId: "QYHxGBH6o4M",
         start: 0,
-        cover: "images/covers/Super Freak.jpg"
+        cover: "images/covers/super freak.jpg"
     },
     {
         id: "ontbijt-aan-huis-15",
@@ -142,7 +142,7 @@ export default [
         beschrijving: "Ontbijt aan huis",
         ytId: "cBDqgSOwxkc",
         start: 0,
-        cover: "images/covers/Signed Sealed Delivered.jpg"
+        cover: "images/covers/signed sealed delivered.jpg"
     },
     {
         id: "vrijmibo-15",
@@ -151,7 +151,7 @@ export default [
         beschrijving: "VrijMiBo",
         ytId: "s6fPN5aQVDI",
         start: 0,
-        cover: "images/covers/Sir Duke.jpg"
+        cover: "images/covers/sir duke.jpg"
     },
     {
         id: "borrel-15",
@@ -160,7 +160,7 @@ export default [
         beschrijving: "Borrel",
         ytId: "AVrDdrLZTa8",
         start: 0,
-        cover: "images/covers/Rhythm Of The Night.jpg"
+        cover: "images/covers/rhythm of the night.jpg"
     },
     {
         id: "debat-15",
@@ -169,7 +169,7 @@ export default [
         beschrijving: "Debat",
         ytId: "bCnGFtS4iC4",
         start: 0,
-        cover: "images/covers/He Was Really Saying Something.jpg"
+        cover: "images/covers/he was really saying something.jpg"
     },
     {
         id: "brusjesdag-16",
@@ -178,7 +178,7 @@ export default [
         beschrijving: "Brusjesdag",
         ytId: "sRMP_bo1B4M",
         start: 0,
-        cover: "images/covers/We Are Family.jpg"
+        cover: "images/covers/we are family.jpg"
     },
     {
         id: "kerkplan-17",
@@ -187,7 +187,7 @@ export default [
         beschrijving: "Kerkplan",
         ytId: "VP5rOLzVBic",
         start: 26,
-        cover: "images/covers/Walk In The Light.jpg"
+        cover: "images/covers/walk in the light.jpg"
     },
     {
         id: "taart-en-lunch-17",
@@ -196,7 +196,7 @@ export default [
         beschrijving: "Taart en lunch",
         ytId: "3DSVMDmzCcA",
         start: 0,
-        cover: "images/covers/Easy On A Sunday.jpg"
+        cover: "images/covers/easy on a sunday.jpg"
     },
     {
         id: "van-speijk-diner-18",
@@ -205,7 +205,7 @@ export default [
         beschrijving: "Van Speijk diner",
         ytId: "H-kA3UtBj4M",
         start: 0,
-        cover: "images/covers/What's Going On.jpg"
+        cover: "images/covers/what's going on.jpg"
     },
     {
         id: "installatie-hv-18",
@@ -214,7 +214,7 @@ export default [
         beschrijving: "Installatie H.V.",
         ytId: "OyQVjGdJ60g",
         start: 0,
-        cover: "images/covers/All Night Long.jpg"
+        cover: "images/covers/all night long.jpg"
     },
     {
         id: "op-de-planken-19",
@@ -223,7 +223,7 @@ export default [
         beschrijving: "Op de planken",
         ytId: "ZaMX0Cs5Bc4",
         start: 0,
-        cover: "images/covers/The Tears Of A Clown.jpg"
+        cover: "images/covers/the tears of a clown.jpg"
     },
     {
         id: "borrel-19",
@@ -232,7 +232,7 @@ export default [
         beschrijving: "Borrel",
         ytId: "AVrDdrLZTa8",
         start: 0,
-        cover: "images/covers/Rhythm Of The Night.jpg"
+        cover: "images/covers/rhythm of the night.jpg"
     },
     {
         id: "debat-19",
@@ -241,7 +241,7 @@ export default [
         beschrijving: "Debat",
         ytId: "bCnGFtS4iC4",
         start: 0,
-        cover: "images/covers/He Was Really Saying Something.jpg"
+        cover: "images/covers/he was really saying something.jpg"
     },
     {
         id: "klus-je-corsage-20",
@@ -250,7 +250,7 @@ export default [
         beschrijving: "Klus je corsage",
         ytId: "M5Z9-QCmZyw",
         start: 0,
-        cover: "images/covers/Just My Imagination.jpg"
+        cover: "images/covers/just my imagination.jpg"
     },
     {
         id: "hartige-maaltijd-20",
@@ -259,7 +259,7 @@ export default [
         beschrijving: "Hartige Maaltijd",
         ytId: "rc0XEw4m-3w",
         start: 0,
-        cover: "images/covers/Living For The City.jpg"
+        cover: "images/covers/living for the city.jpg"
     },
     {
         id: "plaatje-draaien-20",
@@ -268,7 +268,7 @@ export default [
         beschrijving: "Plaatje draaien",
         ytId: "Vlckx_CjlWc",
         start: 0,
-        cover: "images/covers/Take Me Higher.jpg"
+        cover: "images/covers/take me higher.jpg"
     },
     {
         id: "debat-20",
@@ -277,7 +277,7 @@ export default [
         beschrijving: "Debat",
         ytId: "bCnGFtS4iC4",
         start: 0,
-        cover: "images/covers/He Was Really Saying Something.jpg"
+        cover: "images/covers/he was really saying something.jpg"
     },
     {
         id: "vrijwillige-kring-21",
@@ -286,7 +286,7 @@ export default [
         beschrijving: "Vrijwillige kring",
         ytId: "-1QWlL7YuXw",
         start: 0,
-        cover: "images/covers/Heaven Help Us All.jpg"
+        cover: "images/covers/heaven help us all.jpg"
     },
     {
         id: "borrel-21",
@@ -295,7 +295,7 @@ export default [
         beschrijving: "Borrel",
         ytId: "AVrDdrLZTa8",
         start: 0,
-        cover: "images/covers/Rhythm Of The Night.jpg"
+        cover: "images/covers/rhythm of the night.jpg"
     },
     {
         id: "debat-21",
@@ -304,7 +304,7 @@ export default [
         beschrijving: "Debat",
         ytId: "bCnGFtS4iC4",
         start: 0,
-        cover: "images/covers/He Was Really Saying Something.jpg"
+        cover: "images/covers/he was really saying something.jpg"
     },
     {
         id: "gala-22",
@@ -313,7 +313,7 @@ export default [
         beschrijving: "Gala",
         ytId: "4GtyMeEcPPE",
         start: 0,
-        cover: "images/covers/Upside Down.jpg"
+        cover: "images/covers/upside down.jpg"
     },
     {
         id: "dede-brunch-23",
@@ -322,6 +322,6 @@ export default [
         beschrijving: "DéDé brunch",
         ytId: "qa-mjjdt24g",
         start: 0,
-        cover: "images/covers/Touch Me In The Morning.jpg"
+        cover: "images/covers/touch me in the morning.jpg"
     }
 ]

@@ -30,12 +30,12 @@
             </div>
         </div>
         <div class="controls">
-            <img class="previous" @click="$emit('previous')" src="../assets/controls/prev.svg" alt="Vorige">
+            <img class="previous" @click="$emit('previous')" src="../assets/images/controls/prev.svg" alt="Vorige">
             <div class="text">
                 <div class="titel">{{titel}}</div>
                 <div class="beschrijving">{{beschrijving}}</div>
             </div>
-            <img class="next" @click="$emit('next')" src="../assets/controls/next.svg" alt="Volgende">
+            <img class="next" @click="$emit('next')" src="../assets/images/controls/next.svg" alt="Volgende">
         </div>
     </div>
 </template>
