@@ -29,9 +29,9 @@
     import {Power2, TimelineLite} from 'gsap'
     import Song from './components/Song'
     import Record from './components/Record'
+    import Controls from './components/Controls'
     import PlayerStates from './PlayerStates'
     import playlist from './playlist'
-    import Controls from './components/Controls'
 
     export default {
         name: 'app',
@@ -70,6 +70,11 @@
                 item.addEventListener('click', () => {
                     this.play(this.playlist.find(s => s.id === item.id));
                 })
+            });
+
+            // Global event pauseMusic laat de muziek stoppen
+            document.addEventListener('pauseMusic', () => {
+                this.pause();
             })
         },
         mounted() {
@@ -140,8 +145,13 @@
                     element.querySelector(".play").classList.add("playing");
                 }
             },
+            pause() {
+                this.player.pauseVideo();
+                this.hideRecord();
+            },
             play(song) {
                 this.updatePlayButtons(song);
+                document.dispatchEvent(new Event('pauseVideo'));
 
                 if (this.currentSong !== song) {
                     this.currentSong = song;
@@ -153,9 +163,7 @@
                     this.showRecord();
                 } else {
                     if (this.isPlaying || this.isBuffering) {
-                        this.player.pauseVideo();
-
-                        this.hideRecord();
+                        this.pause();
                     } else {
                         this.player.playVideo();
 

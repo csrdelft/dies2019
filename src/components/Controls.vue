@@ -76,7 +76,7 @@
         position: absolute;
         width: 300px;
         height: 300px;
-        margin-left: -155px;
+        margin-left: -150px;
         left: 50%;
         padding: 100px;
         top: -335px;

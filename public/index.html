@@ -9,10 +9,6 @@
     <meta name="author" content="Gerben Oolbekkink">
 
     <title>Motown Fever - Dies 2019</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous">
 </head>
 
 <body>
@@ -62,34 +58,46 @@
             <div class="ray"></div>
         </div>
     </div>
-    <svg class="logo-groot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-         viewBox="0 0 3580.8777 3512.5046">
-        <defs id="defs4686">
-            <clipPath id="vinyl">
-                <!-- clip path in de vorm van een lp. -->
-                <path d="M 1790.6447,240.95477 A 1515.6484,1515.6484 0 0 0 274.99581,1756.6036 1515.6484,1515.6484 0 0 0 1790.6447,3272.2525 1515.6484,1515.6484 0 0 0 3306.2936,1756.6036 1515.6484,1515.6484 0 0 0 1790.6447,240.95477 Z m 0.9699,1475.18323 a 40.779928,40.779928 0 0 1 40.7789,40.7803 40.779928,40.779928 0 0 1 -40.7789,40.7806 40.779928,40.779928 0 0 1 -40.7807,-40.7806 40.779928,40.779928 0 0 1 40.7807,-40.7803 z"></path>
-            </clipPath>
-        </defs>
-        <!-- Halfdoorzichtige rand
-          <path d="M 1790.4389,0 A 1790.4383,1756.2517 0 0 0 0,1756.2523 1790.4383,1756.2517 0 0 0 1790.4389,3512.5046 1790.4383,1756.2517 0 0 0 3580.8777,1756.2523 1790.4383,1756.2517 0 0 0 1790.4389,0 Z m 1.1458,1709.3629 a 48.173404,47.253586 0 0 1 48.1721,47.2541 48.173404,47.253586 0 0 1 -48.1721,47.2543 48.173404,47.253586 0 0 1 -48.1743,-47.2543 48.173404,47.253586 0 0 1 48.1743,-47.2541 z"
-          style="opacity:0.3;fill:#000000;fill-opacity:1;" /> -->
-        <image xlink:href="<%= BASE_URL%>images/logo.svg" clip-path="url(#vinyl)" x="283.29498" y="247.49956" width="3020"
-               height="3020"></image>
-        <image id="vinyl-svg" xlink:href="<%= BASE_URL %>images/vinyl-achtergrond.jpg" clip-path="url(#vinyl)" x="271.29498"
-               y="237.49956"
-               width="3040"
-               height="3038" style="mix-blend-mode:screen"></image>
-    </svg>
+    <div class="logo-container">
+        <svg class="logo-groot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             version="1.1"
+             viewBox="0 0 3580.8777 3512.5046">
+            <defs id="defs4686">
+                <clipPath id="vinyl">
+                    <!-- clip path in de vorm van een lp. -->
+                    <path d="M 1790.6447,240.95477 A 1515.6484,1515.6484 0 0 0 274.99581,1756.6036 1515.6484,1515.6484 0 0 0 1790.6447,3272.2525 1515.6484,1515.6484 0 0 0 3306.2936,1756.6036 1515.6484,1515.6484 0 0 0 1790.6447,240.95477 Z m 0.9699,1475.18323 a 40.779928,40.779928 0 0 1 40.7789,40.7803 40.779928,40.779928 0 0 1 -40.7789,40.7806 40.779928,40.779928 0 0 1 -40.7807,-40.7806 40.779928,40.779928 0 0 1 40.7807,-40.7803 z"></path>
+                </clipPath>
+            </defs>
+            <!-- Halfdoorzichtige rand
+              <path d="M 1790.4389,0 A 1790.4383,1756.2517 0 0 0 0,1756.2523 1790.4383,1756.2517 0 0 0 1790.4389,3512.5046 1790.4383,1756.2517 0 0 0 3580.8777,1756.2523 1790.4383,1756.2517 0 0 0 1790.4389,0 Z m 1.1458,1709.3629 a 48.173404,47.253586 0 0 1 48.1721,47.2541 48.173404,47.253586 0 0 1 -48.1721,47.2543 48.173404,47.253586 0 0 1 -48.1743,-47.2543 48.173404,47.253586 0 0 1 48.1743,-47.2541 z"
+              style="opacity:0.3;fill:#000000;fill-opacity:1;" /> -->
+            <image xlink:href="<%= BASE_URL%>images/logo.svg" clip-path="url(#vinyl)" x="283.29498" y="247.49956"
+                   width="3020"
+                   height="3020"></image>
+            <image id="vinyl-svg" xlink:href="<%= BASE_URL %>images/vinyl-achtergrond.jpg" clip-path="url(#vinyl)"
+                   x="271.29498"
+                   y="237.49956"
+                   width="3040"
+                   height="3038" style="mix-blend-mode:screen"></image>
+        </svg>
+    </div>
 
 </section>
 <a class="anchor" id="filmpje"></a>
 <section class="video">
     <div class="container">
-        <div id="video-container"></div>
-        <!--<div class="embed-responsive embed-responsive-16by9">-->
-            <!--<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/80744790"-->
-                    <!--frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
-        <!--</div>-->
+        <div id="vimeo" class="vimeo-container closed">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-4 -4 38 38">
+                <g>
+                    <path d="M 0,0 30,15 0,30 Z" style="fill:none;stroke:#F2EBC7;stroke-width:4;"></path>
+                </g>
+            </svg>
+            <!--<img src="https://i.vimeocdn.com/video/742710895.jpg?mw=1000&mh=563"/>-->
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/303608102?title=0"
+                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </section>
 <a class="anchor" id="programma"></a>

@@ -1,3 +1,5 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
 /* variables */
 $kleur-groen: #368C70;
 $kleur-blauw-donker: #0A4F51;
@@ -51,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   text-align: center;
   font-size: 28pt;
+  margin-bottom: 1.5em;
 }
 
 h3 {
@@ -68,6 +71,7 @@ p {
 /* drie kolommen op grote schermen, twee kolommon op gemiddelde schermen, één kolom op mobiel */
 .fluid-columns {
   column-count: 3;
+  column-gap: 30px;
 
   & > * {
     break-inside: avoid;
@@ -77,6 +81,7 @@ p {
 
 .fluid-columns-4 {
   column-count: 4;
+  column-gap: 30px;
 
   & > * {
     break-inside: avoid;
@@ -171,14 +176,17 @@ nav {
 }
 
 /* header */
-
-.logo-groot {
-  width: 500px;
-  position: absolute;
-  top: 100px;
-  margin: 0 auto 0 -250px;
-  left: 50%;
+.logo-container {
+  width: 100%;
   z-index: $z-index-top;
+  position: absolute;
+  top:100px;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+}
+.logo-groot {
+  max-width: 500px;
 }
 
 .burst {
@@ -285,8 +293,45 @@ nav {
 }
 
 /* video */
-.video iframe {
+.video .container {
+  display: flex;
+  align-items: center;
+  height: 1000px;
+  overflow: visible;
+  margin-top: -300px;
+  margin-bottom: -350px;
+}
+.video .vimeo-container img {
+  position: relative;
+  width: 100%;
+}
+.vimeo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: height ease-in-out 1s, transform ease-in-out 1s;
+  height: 400px;
+  width: 100%;
   z-index: $z-index-top;
+  transform: scale(1);
+
+  &.closed {
+    transform: scale(0.8);
+
+    svg {
+      display: block;
+    }
+  }
+
+  svg {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    z-index: 12;
+    pointer-events: none;
+  }
 }
 
 /* programma */
