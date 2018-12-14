@@ -43,9 +43,6 @@
         computed: {
             songIndex() {
                 return this.playlist.indexOf(this.currentSong);
-            },
-            tracksLeftPos() {
-                return -this.songIndex * 360;
             }
         },
         created() {
@@ -107,9 +104,6 @@
                 } else {
                     this.play(this.playlist[this.songIndex - 1]);
                 }
-            },
-            async skip() {
-                this.player.seekTo(await this.player.getDuration() - 5, true);
             },
             scrollTo(song, duration = 1) {
                 const {tracks} = this.$refs;

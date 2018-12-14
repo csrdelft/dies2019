@@ -1,9 +1,10 @@
 <template>
-    <div :class="className"
+    <div class="song"
+         :style="{opacity}"
          @click="$emit('play')"
          @mouseover="active = true"
          @mouseleave="active = false">
-        <img :src="cover" alt=""/>
+        <img :src="cover" :alt="titel"/>
     </div>
 </template>
 
@@ -18,8 +19,13 @@
             distance: Number
         },
         computed: {
-            className() {
-                return 'song distance-' + Math.min(this.distance, 3);
+            opacity() {
+                switch (this.distance) {
+                    case 0: return 1;
+                    case 1: return 0.8;
+                    case 2: return 0.5;
+                    default: return 0.3;
+                }
             }
         }
     }
@@ -34,21 +40,5 @@
     .song img {
         width: 300px;
         border: 3px solid white;
-    }
-
-    .distance-0 {
-        opacity: 1;
-    }
-
-    .distance-1 {
-        opacity: 0.8;
-    }
-
-    .distance-2 {
-        opacity: 0.5;
-    }
-
-    .distance-3 {
-        opacity: 0.3;
     }
 </style>

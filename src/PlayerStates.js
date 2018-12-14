@@ -1,3 +1,6 @@
+/**
+ * Mogelijke status van een youtube player.
+ */
 export default {
   BUFFERING: 3,
   ENDED: 0,
