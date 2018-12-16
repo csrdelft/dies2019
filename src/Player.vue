@@ -178,7 +178,7 @@
 <style scoped>
     .player {
         overflow: hidden;
-        margin-top: -200px;
+        margin-top: -300px;
     }
 
     .tracks {
