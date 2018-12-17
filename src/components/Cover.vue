@@ -1,16 +1,12 @@
 <template>
-    <div class="song"
-         :style="{opacity}"
-         @click="$emit('play')"
-         @mouseover="active = true"
-         @mouseleave="active = false">
+    <div class="song" :style="{opacity}" @click="$emit('play')">
         <img :src="cover" :alt="titel"/>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Song',
+        name: 'Cover',
         props: {
             titel: String,
             beschrijving: String,

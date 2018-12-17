@@ -2,15 +2,15 @@
     <div id="player" class="player">
         <Record ref="record"></Record>
         <div ref="tracks" class="tracks">
-            <Song v-for="(song, i) in playlist"
-                  :key="song.id"
-                  :titel="song.titel"
-                  :beschrijving="song.beschrijving"
-                  :cover="song.cover"
-                  :distance="Math.abs(songIndex - i)"
-                  :currentSong="currentSong === song"
-                  :playing="isPlaying"
-                  @play="play(song)"/>
+            <Cover v-for="(song, i) in playlist"
+                   :key="song.id"
+                   :titel="song.titel"
+                   :beschrijving="song.beschrijving"
+                   :cover="song.cover"
+                   :distance="Math.abs(songIndex - i)"
+                   :currentSong="currentSong === song"
+                   :playing="isPlaying"
+                   @play="play(song)"/>
         </div>
 
         <Controls :beschrijving="currentSong.beschrijving"
@@ -21,23 +21,35 @@
                   @play="playCurrentSong"
                   @next="playNextSong"
                   @previous="playPreviousSong" />
+
+        <!--Alleen weergeven als er een keer is gespeeld.-->
+        <MiniPlayer v-if="heeftGespeeld"
+                    :is-playing="isPlaying"
+                    :titel="currentSong.titel"
+                    :is-buffering="isBuffering"
+                    :cover="currentSong.cover"
+                    @play="playCurrentSong"
+                    @next="playNextSong"
+                    @previous="playPreviousSong"/>
     </div>
 </template>
 
 <script>
     import YoutubePlayer from 'youtube-player'
     import {Power2, TimelineLite} from 'gsap'
-    import Song from './components/Song'
+    import Cover from './components/Cover'
     import Record from './components/Record'
     import Controls from './components/Controls'
     import PlayerStates from './PlayerStates'
+    import MiniPlayer from "./components/MiniPlayer";
     import playlist from './playlist'
 
     export default {
         name: 'app',
         components: {
+            MiniPlayer,
             Controls,
-            Song,
+            Cover,
             Record
         },
         computed: {
@@ -57,15 +69,14 @@
 
             // currentSong is de eerste activiteit die nog niet is afgelopen of de allerlaatste activiteit
             this.currentSong = this.playlist.slice(-1)[0];
-            for (let song of this.playlist) {
-                if (song.moment > new Date()) {
-                    this.currentSong = song;
-                    break;
-                }
-            }
+
+            let now = new Date(2019, 2, 20);
+            this.currentSong = this.playlist.find(song => song.moment > now) || this.playlist[this.playlist.length - 1];
+
+            // Zet de eerste video klaar.
             this.player.cueVideoById(this.currentSong.ytId, this.currentSong.start);
 
-            // .yt-item nodes zitten in de html omdat ze dan sneller geladen worden
+            // .yt-item nodes zitten in de html omdat ze dan sneller geladen worden en zonder js werken
             document.querySelectorAll('.yt-item').forEach(item => {
                 item.addEventListener('click', () => {
                     this.play(this.playlist.find(s => s.id === item.id));
@@ -88,6 +99,7 @@
             isPlaying: false,
             isBuffering: false,
             isMoving: false,
+            heeftGespeeld: false
         }),
         methods: {
             getSongIndex(song) {
@@ -150,6 +162,7 @@
                 this.hideRecord();
             },
             play(song) {
+                this.heeftGespeeld = true;
                 this.updatePlayButtons(song);
                 document.dispatchEvent(new Event('pauseVideo'));
 
