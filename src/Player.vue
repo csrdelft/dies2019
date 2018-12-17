@@ -70,7 +70,7 @@
             // currentSong is de eerste activiteit die nog niet is afgelopen of de allerlaatste activiteit
             this.currentSong = this.playlist.slice(-1)[0];
 
-            let now = new Date(2019, 2, 20);
+            let now = new Date();
             this.currentSong = this.playlist.find(song => song.moment > now) || this.playlist[this.playlist.length - 1];
 
             // Zet de eerste video klaar.
