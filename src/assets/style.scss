@@ -98,7 +98,10 @@ p {
   }
 }
 
-@media (max-width: 786px) { /* md */
+@media (max-width: 768px) { /* md */
+  .video {
+    margin-top: -200px;
+  }
   .fluid-columns {
     column-count: 1;
   }
@@ -107,7 +110,7 @@ p {
   }
 }
 
-@media (max-width: 576px) { /* sm */
+@media (max-width: 540px) { /* sm */
   .fluid-columns-4 {
     column-count: 1;
   }
@@ -196,69 +199,30 @@ nav {
 }
 
 .burst {
-  width: 100%;
-  height: 1000px;
-
-  clip-path: ellipse(75vw 600px at center 0);
-  overflow: hidden;
-
-  .outer {
-    clip-path: ellipse(1600px 500px at center 200px);
-    width: 2000px;
-    left: 50%;
-    margin-left: -1000px;
-    position: relative;
-    z-index: $z-index-bottom;
+  clip-path: ellipse(2000px 1000px at center 0);
+  @media (max-width: 768px) {
+    clip-path: ellipse(1000px 700px at center 0);
   }
 
-  .ray {
-    top: -200px;
-    display: block;
-    animation-duration: #{$animation-duration-base};
+  overflow: hidden;
+  height: 1000px;
+
+  .burst-rotating {
+    height: 3000px;
+    width: 3000px;
+
+    left: 50%;
+    top: 250px;
+    margin-top: -1500px;
+    margin-left: -1500px;
+    background-size: 100%;
+    position: relative;
+    z-index: $z-index-bottom;
+    animation-name: draai;
+    animation-duration: $animation-duration-base;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    position: absolute;
-    transform-origin: 100% 50%;
-
-    width: 2000px;
-    height: 1000px;
-    right: 50%;
-
-    background-position: center;
-    background-repeat: no-repeat;
-
-    /*kleuren */
-    &:nth-child(3n) {
-      background-image: url(images/ray-groen.svg);
-      background-size: 4000px 900px;
-    }
-
-    &:nth-child(3n+1) {
-      background-image: url(images/ray-beige.svg);
-      background-size: 4000px 700px;
-    }
-
-    &:nth-child(3n+2) {
-      background-image: url(images/ray-oranje.svg);
-      background-size: 4000px 600px;
-    }
-
-    /* Iedere straal is een 1/i e verder */
-    @for $i from 1 to $num-rays + 1 {
-      &:nth-child(#{$i}) {
-        //animation-delay: $animation-duration-base / $num-rays * -1 * $i;
-        animation-name: #{'draai' + $i};
-      }
-
-      @keyframes #{'draai' + $i} {
-        from {
-          transform: rotate(#{360 / $num-rays * $i + 'deg'});
-        }
-        to {
-          transform: rotate(#{360 + 360 / $num-rays * $i + 'deg'});
-        }
-      }
-    }
+    background-image: url(images/bg.svg);
   }
 }
 
@@ -314,7 +278,7 @@ nav {
   height: 1000px;
   overflow: visible;
   margin-top: -300px;
-  margin-bottom: -350px;
+  margin-bottom: -300px;
 }
 
 .video .vimeo-container img {
@@ -328,13 +292,11 @@ nav {
   align-items: center;
   overflow: hidden;
   transition: height ease-in-out 1s, transform ease-in-out 1s;
-  height: 400px;
+  height: 450px;
   width: 100%;
   z-index: $z-index-top;
-  transform: scale(1);
 
   &.closed {
-    transform: scale(0.8);
 
     svg {
       display: block;

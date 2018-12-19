@@ -35,6 +35,6 @@
 
     .song img {
         width: 300px;
-        border: 3px solid white;
+        border: 3px solid #F2EBC7;
     }
 </style>
