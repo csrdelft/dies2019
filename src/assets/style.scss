@@ -17,7 +17,7 @@ $achtergrond-etiquette: $kleur-rood-donker;
 $achtergrond-galadate: $kleur-beige;
 $tekst-galadate: $kleur-groen;
 $num-rays: 21;
-$animation-duration-base: 30s;
+$animation-duration-base: 50s;
 $z-index-top: 11;
 $z-index-bottom: 10;
 
@@ -126,6 +126,10 @@ section {
   padding: 5em 0;
 }
 
+.button-wrapper {
+  padding-right: 2em;
+  padding-top: 3em;
+}
 .button {
   display: flex;
   justify-content: center;
@@ -135,7 +139,7 @@ section {
   width: 150px;
   height: 150px;
   padding: 1em;
-  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
   text-transform: uppercase;
   text-align: center;
 }
@@ -180,68 +184,79 @@ nav {
   width: 100%;
   z-index: $z-index-top;
   position: absolute;
-  top:100px;
+  top: 100px;
   display: flex;
   justify-content: center;
   height: 500px;
 }
+
 .logo-groot {
   max-width: 500px;
+  width: 500px;
 }
 
 .burst {
   width: 100%;
   height: 1000px;
+
+  clip-path: ellipse(75vw 600px at center 0);
   overflow: hidden;
 
-
   .outer {
+    clip-path: ellipse(1600px 500px at center 200px);
     width: 2000px;
     left: 50%;
     margin-left: -1000px;
     position: relative;
-    clip-path: ellipse(800px 600px at center 300px);
     z-index: $z-index-bottom;
   }
 
   .ray {
-    top: 200px;
+    top: -200px;
     display: block;
-    width: 0;
-    height: 0;
-    border-width: 100px 1000px;
-    border-color: transparent transparent transparent #fb985d;
-    border-style: solid;
-    animation-name: draai;
     animation-duration: #{$animation-duration-base};
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     position: absolute;
+    transform-origin: 100% 50%;
 
+    width: 2000px;
+    height: 1000px;
+    right: 50%;
+
+    background-position: center;
+    background-repeat: no-repeat;
 
     /*kleuren */
     &:nth-child(3n) {
-      border-color: transparent transparent transparent $kleur-groen;
-      border-width: 300px 1000px;
-      margin-top: -200px;
+      background-image: url(images/ray-groen.svg);
+      background-size: 4000px 900px;
     }
 
     &:nth-child(3n+1) {
-      border-color: transparent transparent transparent $kleur-beige;
-      border-width: 200px 1000px;
-      margin-top: -100px;
+      background-image: url(images/ray-beige.svg);
+      background-size: 4000px 700px;
     }
 
     &:nth-child(3n+2) {
-      border-color: transparent transparent transparent $kleur-oranje;
-      border-width: 150px 1000px;
-      margin-top: -50px;
+      background-image: url(images/ray-oranje.svg);
+      background-size: 4000px 600px;
     }
 
     /* Iedere straal is een 1/i e verder */
-    @for $i from 1 to $num-rays {
+    @for $i from 1 to $num-rays + 1 {
       &:nth-child(#{$i}) {
-        animation-delay: $animation-duration-base / $num-rays * -1 * $i;
+        //animation-delay: $animation-duration-base / $num-rays * -1 * $i;
+        animation-name: #{'draai' + $i};
+      }
+
+      @keyframes #{'draai' + $i} {
+        from {
+          transform: rotate(#{360 / $num-rays * $i + 'deg'});
+        }
+        to {
+          transform: rotate(#{360 + 360 / $num-rays * $i + 'deg'});
+        }
       }
     }
   }
@@ -301,10 +316,12 @@ nav {
   margin-top: -300px;
   margin-bottom: -350px;
 }
+
 .video .vimeo-container img {
   position: relative;
   width: 100%;
 }
+
 .vimeo-container {
   position: relative;
   display: flex;
@@ -356,8 +373,6 @@ nav {
   }
 
   .play {
-    grid-row: 1 / 3;
-    grid-column: 1;
     background-image: url(images/controls/play.svg);
     width: 24px;
     height: 24px;

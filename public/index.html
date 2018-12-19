@@ -37,37 +37,52 @@
 <section class="head">
     <div class="burst">
         <div class="outer">
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
-            <div class="ray"></div>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
+            <span class="ray"></span>
         </div>
     </div>
     <div class="logo-container">
         <svg class="logo-groot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="1.1" viewBox="0 0 500 500">
+                version="1.1" viewBox="-25 -25 550 550">
             <defs>
                 <clipPath id="vinyl">
-                    <path d="M 250,0 A 250,250 0 0 0 0,250 250,250 0 0 0 250,500 250,250 0 0 0 500,250 250,250 0 0 0 250,0 Z m 0,243.5 a 6.5,6.5 0 0 1 6.5,6.5 6.5,6.5 0 0 1 -6.5,6.5 6.5,6.5 0 0 1 -6.5,-6.5 6.5,6.5 0 0 1 6.5,-6.5 z"></path>
+                    <circle cx="250" cy="250" r="250"></circle>
                 </clipPath>
+                <filter id="dropshadow" height="130%">
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="10"></feGaussianBlur>
+                    <feComponentTransfer result="blur-with-spread">
+                        <feFuncA type="linear" slope="10"></feFuncA>
+                    </feComponentTransfer>
+
+                    <feFlood flood-color="#197173" flood-opacity="0.5"></feFlood>
+                    <feComposite operator="in" in2="blur-with-spread"></feComposite>
+
+                    <feMerge>
+                        <feMergeNode></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                </filter>
             </defs>
+            <circle cx="250" cy="250" r="249" fill="#197173" filter="url(#dropshadow)"></circle>
             <image xlink:href="<%= BASE_URL %>images/logo.svg" clip-path="url(#vinyl)" x="0" y="0"
                     height="500"
                     width="500"></image>
@@ -75,6 +90,7 @@
                     height="502"
                     width="502"
                     style="mix-blend-mode:screen"></image>
+            <circle cx="250" cy="250" r="6.5" fill="#197173"></circle>
         </svg>
     </div>
 
@@ -85,7 +101,7 @@
         <div id="vimeo" class="vimeo-container closed">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-4 -4 38 38">
                 <g>
-                    <path d="M 0,0 30,15 0,30 Z" style="fill:none;stroke:#F2EBC7;stroke-width:4;"></path>
+                    <path d="M 0,0 30,15 0,30 Z" style="fill:none;stroke:#F2EBC7;stroke-width:1;"></path>
                 </g>
             </svg>
             <!--<img src="https://i.vimeocdn.com/video/742710895.jpg?mw=1000&mh=563"/>-->
@@ -414,8 +430,8 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-center">
-                <h3 class="button">Shrijf je hier in</h3>
+            <div class="d-flex justify-content-center button-wrapper">
+                <h3 class="button">Schrijf je hier in</h3>
             </div>
         </div>
     </div>
@@ -466,7 +482,7 @@
                 gewoonte om tijdens de Dies uw penning te dragen op Confide. Eerstejaars zullen deze ontvangen op de
                 dies H.V. als ze geïnstalleerd worden. Op het gala hoeft u uw penning niet te dragen.</p>
             <div>
-                <h4>Voorbereidingen voor het Gala</h4>
+                <h3>Voorbereidingen voor het Gala</h3>
                 <h4>Uitnodigingen</h4>
                 <p>De heer vraagt de dame in een brief, handgeschreven met zilveren pen op blauw papier, of zij hem wil
                     vergezellen naar het gala. De dame antwoordt hierop met een brief, handgeschreven met gouden pen op
@@ -590,10 +606,10 @@
                     <input class="form-control" type="email" placeholder="Mailadres" required>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Wie ben je?" required>
+                    <textarea class="form-control" type="text" placeholder="Vertel iets over jezelf" required></textarea>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Wat zoek je in een date?" required>
+                    <textarea class="form-control" type="text" placeholder="Wat zoek je in een date?" required></textarea>
                 </div>
                 <div class="form-group">
                     <input class="btn btn-primary" type="submit" value="Verzend">
@@ -606,9 +622,9 @@
         </div>
     </div>
 </section>
-<footer>
+<!-- <footer>
     <img src="images/footer.svg" alt="Afbeelding footer"/>
-</footer>
+</footer> -->
 <div id="yt-player"></div>
 </body>
 
