@@ -30,6 +30,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/vars';
+
     .controls-container {
         position: relative;
     }
@@ -76,10 +78,10 @@
     }
 
     .titel {
-        font-family: Futura, sans-serif;
+        font-family: $font-header;
     }
 
     .beschrijving {
-        font-family: Futura Bk BT, sans-serif;
+        font-family: $font-text;
     }
 </style>

@@ -27,7 +27,9 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    @import "../assets/vars.scss";
+
     .song {
         margin: 30px;
         transition: opacity linear 1s;
@@ -35,6 +37,6 @@
 
     .song img {
         width: 300px;
-        border: 3px solid #F2EBC7;
+        border: 3px solid $kleur-beige;
     }
 </style>

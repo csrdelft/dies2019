@@ -32,6 +32,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/vars';
+
     .media {
         z-index: 13;
         position: fixed;
@@ -41,7 +43,7 @@
         right: 0;
         margin: 10px;
         padding: 5px;
-        background: #197173;
+        background: $kleur-blauw;
         flex-direction: row-reverse;
 
         overflow: hidden;
@@ -77,7 +79,7 @@
 
 
             .titel {
-                font-family: Futura, sans-serif;
+                font-family: $font-header;
             }
 
             .controls {
