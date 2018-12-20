@@ -40,6 +40,7 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        line-height: normal;
     }
 
     .previous, .text, .next {

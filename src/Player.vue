@@ -68,8 +68,6 @@
             });
 
             // currentSong is de eerste activiteit die nog niet is afgelopen of de allerlaatste activiteit
-            this.currentSong = this.playlist.slice(-1)[0];
-
             let now = new Date();
             this.currentSong = this.playlist.find(song => song.moment > now) || this.playlist[this.playlist.length - 1];
 
@@ -77,16 +75,12 @@
             this.player.cueVideoById(this.currentSong.ytId, this.currentSong.start);
 
             // .yt-item nodes zitten in de html omdat ze dan sneller geladen worden en zonder js werken
-            document.querySelectorAll('.yt-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    this.play(this.playlist.find(s => s.id === item.id));
-                })
-            });
+            document.querySelectorAll('.yt-item').forEach(item =>
+                item.addEventListener('click', () => this.play(this.playlist.find(s => s.id === item.id)))
+            );
 
             // Global event pauseMusic laat de muziek stoppen
-            document.addEventListener('pauseMusic', () => {
-                this.pause();
-            })
+            document.addEventListener('pauseMusic', () => this.pause);
         },
         mounted() {
             this.scrollTo(this.currentSong, 0);
@@ -146,7 +140,7 @@
 
                 this.timeline
                     .to(record.$el, 0, {opacity: 1})
-                    .to(record.$el, 0.5, {top: 250});
+                    .to(record.$el, 0.5, {top: 270});
             },
             updatePlayButtons(song) {
                 let previous = document.querySelectorAll(".playing");
