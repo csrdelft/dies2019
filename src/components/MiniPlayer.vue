@@ -38,6 +38,7 @@
         z-index: 13;
         position: fixed;
         width: 100px;
+        max-width: 100%;
         height: 100px;
         bottom: 0;
         right: 0;
@@ -56,8 +57,10 @@
         .cover {
             height: 100%;
 
-            img {
-                height: 100%;
+            & > img {
+                height: 90px;
+                width: 90px;
+                object-fit: cover;
             }
 
             .play-pause {

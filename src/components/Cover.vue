@@ -37,6 +37,8 @@
 
     .song img {
         width: 300px;
+        height: 300px;
+        object-fit: cover;
         border: 3px solid $kleur-beige;
     }
 </style>

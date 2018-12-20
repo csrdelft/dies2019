@@ -15,7 +15,7 @@ $achtergrond-etiquette: $kleur-rood-donker;
 $achtergrond-galadate: $kleur-beige;
 $tekst-galadate: $kleur-groen;
 $num-rays: 21;
-$animation-duration-base: 50s;
+$animation-duration: 50s;
 $z-index-top: 11;
 $z-index-bottom: 10;
 
@@ -26,7 +26,8 @@ $font-text: Futura Bk BT, sans-serif;
 
 $theme-colors: (
   "primary": $kleur-blauw,
-  "danger": #ff4136
+  "danger": #ff4136,
+  "white": $kleur-beige,
 );
 
 $font-family-sans-serif: $font-text;

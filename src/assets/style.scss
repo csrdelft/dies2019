@@ -82,13 +82,13 @@ h2 {
 }
 
 a.anchor {
-  position: relative;
-  top: -30px;
+  position: absolute;
+  top: -52px;
 }
 
 a.filmpje-anchor {
-  position: relative;
-  top: calc(225px - 50vh);
+  position: absolute;
+  top: calc(500px - 50vh);
 }
 
 p.heavy {
@@ -97,6 +97,7 @@ p.heavy {
 
 section {
   padding: 5em 0;
+  position: relative;
 }
 
 .button-wrapper {
@@ -192,10 +193,7 @@ nav {
     margin-left: -1500px;
     position: relative;
     z-index: $z-index-bottom;
-    animation-name: draai;
-    animation-duration: $animation-duration-base;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: draai $animation-duration linear infinite;
     background-image: url(images/bg.svg);
     background-size: 100%;
     background-position: center center;
@@ -216,12 +214,14 @@ nav {
 .head {
   height: 670px;
   padding: 0;
+  position: static;
   background-color: $kleur-blauw-donker;
 }
 
 .video {
   background-color: $achtergrond-programma;
   padding-bottom: 0;
+  position: static;
 }
 
 .programma {
@@ -230,7 +230,7 @@ nav {
 
 .pre-programma {
   background-color: $kleur-groen;
-  padding: 2em;
+  padding: 2em 0;
 }
 
 .motown {
@@ -256,7 +256,7 @@ nav {
 }
 
 .galadate, .motown {
-  min-height: calc(100vh - 45px); // Scherm hoogt - nav hoogte
+  min-height: calc(100vh - 52px); // Scherm hoogte - nav hoogte
 }
 
 /* video */
@@ -267,32 +267,29 @@ nav {
   overflow: visible;
   margin-top: -300px;
   margin-bottom: -300px;
-}
-
-.vimeo-container {
   position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  transition: height ease-in-out 1s;
-  height: 450px;
-  width: 100%;
-  z-index: $z-index-top;
 
-  &.closed {
+  .vimeo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: height ease-in-out 1s;
+    height: 450px;
+    width: 100%;
+    z-index: $z-index-top;
 
-    svg {
+    &.closed svg {
       display: block;
     }
-  }
 
-  svg {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    z-index: 12;
-    pointer-events: none;
+    svg {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      z-index: 12;
+    }
   }
 }
 
@@ -351,6 +348,7 @@ nav {
 
 /* buttons */
 .btn-primary {
+  color: $kleur-beige;
   padding: 1em 2em;
   float: right;
 }
