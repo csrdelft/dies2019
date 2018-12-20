@@ -40,7 +40,7 @@
     </div>
     <div class="logo-container">
         <svg class="logo-groot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="1.1" viewBox="-25 -25 550 550">
+             version="1.1" viewBox="-25 -25 550 550">
             <defs>
                 <clipPath id="vinyl">
                     <circle cx="250" cy="250" r="250"></circle>
@@ -62,12 +62,13 @@
             </defs>
             <circle cx="250" cy="250" r="249" fill="#197173" filter="url(#dropshadow)"></circle>
             <image xlink:href="<%= BASE_URL %>images/logo.svg" clip-path="url(#vinyl)" x="0" y="0"
-                    height="500"
-                    width="500"></image>
-            <image id="vinyl-svg" xlink:href="<%= BASE_URL %>images/vinyl-achtergrond.jpg" clip-path="url(#vinyl)" y="-1" x="-1"
-                    height="502"
-                    width="502"
-                    style="mix-blend-mode:screen"></image>
+                   height="500"
+                   width="500"></image>
+            <image id="vinyl-svg" xlink:href="<%= BASE_URL %>images/vinyl-achtergrond.jpg" clip-path="url(#vinyl)"
+                   y="-1" x="-1"
+                   height="502"
+                   width="502"
+                   style="mix-blend-mode:screen"></image>
             <circle cx="250" cy="250" r="6.5" fill="#197173"></circle>
         </svg>
     </div>
@@ -82,7 +83,6 @@
                     <path d="M 0,0 30,15 0,30 Z" style="fill:none;stroke:#F2EBC7;stroke-width:1;"></path>
                 </g>
             </svg>
-            <!--<img src="https://i.vimeocdn.com/video/742710895.jpg?mw=1000&mh=563"/>-->
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/303608102?title=0"
                         frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -418,16 +418,16 @@
 <section class="motown">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <h2>Motown</h2>
+            <div class="col-md-7">
+                <h2 class="text-left">Motown</h2>
 
                 <p class="heavy">
+                    <img src="<%= BASE_URL %>images/Group 59.png" alt="Afbeelding Motown"/>
                     Ze waren op zoek naar een nieuw geluid, een geluid dat hen zou bevrijden van het raciale label waar
                     ze telkens tegenaan liepen. Dit geluid ontstond in Detroit 'Motor City'.
-                    <img class="img-fluid" src="<%= BASE_URL %>images/Group 59.png" alt="Afbeelding Motown"/>
                 </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <p>Het waren de dagen van het onschuldige Amerika, toen Fats Domino de natie veroverde met zijn
                     'blueberry hill' en Elvis Presley opkomend als een tornado uit Mississippi, fans verzamelde uit alle
                     lagen van de Amerikaanse bevolking. Radiozenders overspoelden het land met het geluid van deze
@@ -440,7 +440,7 @@
                     ziet wat hij netto verdient met dit nummer is hij niet erg tevreden. Zo besluit hij in 1959 met een
                     lening van $800 'Motown Records' op te richten. Het duurt niet lang of Motown Records begint hit na
                     hit te scoren. Denk hierbij aan nummers van artiesten als: The Jackson 5, Marvin Gaye, The Supremes
-                    en Stevie Wonder.Berry Gordy slaagt erin om zwarte artiesten omhoog te werken in de toen grotendeels
+                    en Stevie Wonder. Berry Gordy slaagt erin om zwarte artiesten omhoog te werken in de toen grotendeels
                     door witte artiesten gedomineerde hitlijsten. Met de typerende 'Motown sound' kleurt Motown de jaren
                     60 & 70 en staat bekend als het geluid van jong Amerika in die tijd.</p>
             </div>
@@ -453,7 +453,7 @@
         <h2>Etiquette</h2>
 
         <div class="fluid-columns">
-            <p class="heavy">De dies is het hoogtepunt van het verenigingsleven. U wilt zich tijdens deze feestelijke
+            <p class="heavy">De dies natalis is het hoogtepunt van het verenigingsleven. U wilt zich tijdens deze feestelijke
                 weken van uw meest galante kant laten zien. Daarom zijn hier voor u de etiquette uiteengezet.</p>
             <p class="heavy">Tijdens de Dies Natalis is het passend om goed gekleed naar Confide te komen. Jas en das
                 wordt gewaardeerd, uiteraard zonder dissonanten zoals gymschoenen of witte sokken. Het is verder de
@@ -482,14 +482,18 @@
                 Traditioneel is de corsage een klein bloemstukje, maar de corsage kan ook een ludieke vorm aannemen. De
                 heer draagt de traditionele corsage op de linker revers met de bloem omhoog. De dame draagt de corsage
                 links onder het sleutelbeen met de bloem naar beneden.</p>
-            <h3>Aanvang van het Gala</h3>
-            <h4>Kleding</h4>
-            <p>En dan is het zover: het is de grote dag van het gala. De heer haalt zijn dame thuis op. Als hem open
-                wordt gedaan, wordt de heer bijna verblind door de schoonheid van de dame, waar hij haar dan ook terecht
-                mee complimenteert. Ze draagt een lange, gedecolleteerde avondjapon, die zo goed als mouwloos is. De
-                prachtige, lange handschoenen tot over haar ellebogen en haar opgestoken haar maken het plaatje helemaal
-                af. Maar ook de heer mag er zijn. Hij is gekleed in rokkostuum en heeft glimmende lakschoenen aan. Hij
-                had ook nog een smoking in de kast hangen, maar dat vond hij, terecht, inferieur aan een rokkostuum.</p>
+            <div class="column-split"></div>
+            <div>
+                <h3>Aanvang van het Gala</h3>
+                <h4>Kleding</h4>
+                <p>En dan is het zover: het is de grote dag van het gala. De heer haalt zijn dame thuis op. Als hem open
+                    wordt gedaan, wordt de heer bijna verblind door de schoonheid van de dame, waar hij haar dan ook
+                    terecht mee complimenteert. Ze draagt een lange, gedecolleteerde avondjapon, die zo goed als
+                    mouwloos is. De prachtige, lange handschoenen tot over haar ellebogen en haar opgestoken haar maken
+                    het plaatje helemaal af. Maar ook de heer mag er zijn. Hij is gekleed in rokkostuum en heeft
+                    glimmende lakschoenen aan. Hij had ook nog een smoking in de kast hangen, maar dat vond hij,
+                    terecht, inferieur aan een rokkostuum.</p>
+            </div>
             <p>Tijdens het gala is het niet gepast om een horloge te dragen, immers: gezelligheid kent geen tijd. Enige
                 uitzondering zijn zakhorloges voor de heren en sierlijke horloges die als ornament gedragen worden voor
                 de dames. De heer heeft op het gala twee zakdoeken bij zich: één om eventueel zichzelf het zweet van het
@@ -574,24 +578,28 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h2>Galadate</h2>
+                <h2 class="text-left">Galadate</h2>
 
                 <p>Heb jij nou ook altijd al naar een C.S.R. gala gewild? Het kan! Schrijf hieronder een kort verhaaltje
                     over jezelf en wat je in een date zoekt. Wij organiseren het diner, het feestje en de date! Ben jij
                     er bij?</p>
 
+                <form action="/contactformulier/dies">
                 <div class="form-group">
                     <input class="form-control" type="email" placeholder="Mailadres" required>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" type="text" placeholder="Vertel iets over jezelf" required></textarea>
+                    <textarea class="form-control" type="text" placeholder="Vertel iets over jezelf"
+                              required></textarea>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" type="text" placeholder="Wat zoek je in een date?" required></textarea>
+                    <textarea class="form-control" type="text" placeholder="Wat zoek je in een date?"
+                              required></textarea>
                 </div>
                 <div class="form-group">
                     <input class="btn btn-primary" type="submit" value="Verzend">
                 </div>
+                </form>
 
             </div>
             <div class="col-md-8">
