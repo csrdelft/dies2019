@@ -1,4 +1,4 @@
-# dies-init
+# Motown Fever - Dies 2019 
 
 ## Project setup
 ```
