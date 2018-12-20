@@ -1,0 +1,5 @@
+lang: node_js
+script:
+  - yarn build
+after_success:
+  - .travis/push.sh
