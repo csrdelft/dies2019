@@ -190,7 +190,6 @@ nav {
     top: 250px;
     margin-top: -1500px;
     margin-left: -1500px;
-    background-size: 100%;
     position: relative;
     z-index: $z-index-bottom;
     animation-name: draai;
@@ -198,6 +197,8 @@ nav {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     background-image: url(images/bg.svg);
+    background-size: 100%;
+    background-position: center center;
   }
 }
 
