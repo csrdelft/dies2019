@@ -1,4 +1,5 @@
 lang: node_js
+before_script: yarn install && yarn global add @vue/cli
 script:
   - yarn build
 after_success:
