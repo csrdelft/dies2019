@@ -53,8 +53,8 @@ form.addEventListener('submit', (event) => {
         .post(form.action, formData)
         .then(() => {
             form.reset();
-            errorContainer.classList.remove('d-none', 'alert-error');
-            errorContainer.classList.add('alert-danger');
+            errorContainer.classList.remove('d-none', 'alert-danger');
+            errorContainer.classList.add('alert-success');
             errorContainer.textContent = 'Bericht is verzonden';
         })
         .catch((error) => {
