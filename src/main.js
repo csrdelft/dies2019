@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VimeoPlayer from '@vimeo/player'
+import axios from 'axios';
 import Player from './Player.vue'
 import detectIE from './detect-ie'
 
@@ -37,3 +38,21 @@ vimeoPlayer.on('pause', () => {
 vimeoPlayButton.addEventListener('click', () => vimeoPlayer.play());
 
 document.addEventListener('pauseVideo', () => vimeoPlayer.pause());
+
+let form = document.querySelector('#galadate-form');
+let errorContainer = form.querySelector('.errors');
+form.addEventListener('input', () => errorContainer.textContent = '');
+
+window.onFormSubmit = function (event) {
+    event.preventDefault();
+
+    form.classList.add('loading');
+
+    let formData = new FormData(form);
+    axios
+        .post(form.action, formData)
+        .catch((error) => errorContainer.textContent = error)
+        .then(() => {
+            form.classList.remove('loading');
+        })
+};
