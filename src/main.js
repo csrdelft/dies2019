@@ -43,7 +43,7 @@ let form = document.querySelector('#galadate-form');
 let errorContainer = form.querySelector('.errors');
 form.addEventListener('input', () => errorContainer.textContent = '');
 
-window.onFormSubmit = function (event) {
+form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     form.classList.add('loading');
@@ -54,5 +54,6 @@ window.onFormSubmit = function (event) {
         .catch((error) => errorContainer.textContent = error)
         .then(() => {
             form.classList.remove('loading');
+            errorContainer.textContent = 'Bericht is verzonden';
         })
-};
+});
