@@ -278,6 +278,18 @@ nav {
     height: 450px;
     width: 100%;
     z-index: $z-index-top;
+
+    &.closed svg {
+      display: block;
+    }
+
+    svg {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      z-index: 12;
+    }
   }
 }
 

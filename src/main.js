@@ -19,6 +19,7 @@ if (detectIE() !== false) {
 }
 
 let vimeoContainer = document.querySelector('#vimeo');
+let vimeoPlayButton = vimeoContainer.querySelector('svg');
 let vimeoPlayer = new VimeoPlayer(vimeoContainer.querySelector('iframe'));
 
 vimeoPlayer.on('play', () => {
@@ -33,6 +34,8 @@ vimeoPlayer.on('pause', () => {
     vimeoContainer.classList.add('closed');
     vimeoContainer.style.height = null;
 });
+
+vimeoPlayButton.addEventListener('click', () => vimeoPlayer.play());
 
 document.addEventListener('pauseVideo', () => vimeoPlayer.pause());
 
