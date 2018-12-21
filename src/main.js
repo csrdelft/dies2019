@@ -38,19 +38,28 @@ document.addEventListener('pauseVideo', () => vimeoPlayer.pause());
 
 let form = document.querySelector('#galadate-form');
 let errorContainer = form.querySelector('.errors');
-form.addEventListener('input', () => errorContainer.textContent = '');
+form.addEventListener('input', () => errorContainer.classList.add('d-none'));
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    form.classList.add('loading');
+    form.submitButton.disabled = true;
 
     let formData = new FormData(form);
     axios
         .post(form.action, formData)
-        .catch((error) => errorContainer.textContent = error)
         .then(() => {
-            form.classList.remove('loading');
+            form.reset();
+            errorContainer.classList.remove('d-none', 'alert-error');
+            errorContainer.classList.add('alert-danger');
             errorContainer.textContent = 'Bericht is verzonden';
+        })
+        .catch((error) => {
+            errorContainer.classList.remove('d-none', 'alert-success');
+            errorContainer.classList.add('alert-danger');
+            errorContainer.textContent = error
+        })
+        .then(() => {
+            form.submitButton.disabled =false;
         })
 });
