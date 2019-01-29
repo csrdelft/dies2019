@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VimeoPlayer from '@vimeo/player'
-import axios from 'axios';
 import Player from './Player.vue'
 import detectIE from './detect-ie'
 
@@ -38,31 +37,3 @@ vimeoPlayer.on('pause', () => {
 vimeoPlayButton.addEventListener('click', () => vimeoPlayer.play());
 
 document.addEventListener('pauseVideo', () => vimeoPlayer.pause());
-
-let form = document.querySelector('#galadate-form');
-let errorContainer = form.querySelector('.errors');
-form.addEventListener('input', () => errorContainer.classList.add('d-none'));
-
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    form.submitButton.disabled = true;
-
-    let formData = new FormData(form);
-    axios
-        .post(form.action, formData)
-        .then(() => {
-            form.reset();
-            errorContainer.classList.remove('d-none', 'alert-danger');
-            errorContainer.classList.add('alert-success');
-            errorContainer.textContent = 'Bericht is verzonden';
-        })
-        .catch((error) => {
-            errorContainer.classList.remove('d-none', 'alert-success');
-            errorContainer.classList.add('alert-danger');
-            errorContainer.textContent = error
-        })
-        .then(() => {
-            form.submitButton.disabled =false;
-        })
-});
