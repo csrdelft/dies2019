@@ -583,21 +583,23 @@
                     over jezelf en wat je in een date zoekt. Wij organiseren het diner, het feestje en de date! Ben jij
                     er bij?</p>
 
-                <form id="galadate-form" action="/contactformulier/dies">
-                <div class="errors d-none alert"></div>
+                <form id="galadate-form" action="">
+                <div class="errors alert-info alert">
+                    Dit formulier is niet meer te gebruiken omdat het gala al geweest is.
+                </div>
                 <div class="form-group">
-                    <input class="form-control" type="email" name="email" placeholder="Mailadres" required>
+                    <input class="form-control" type="email" name="email" placeholder="Mailadres" required disabled>
                 </div>
                 <div class="form-group">
                     <textarea class="form-control" type="text" name="naam" placeholder="Vertel iets over jezelf"
-                              required></textarea>
+                              required disabled></textarea>
                 </div>
                 <div class="form-group">
                     <textarea class="form-control" type="text" name="verhaal" placeholder="Wat zoek je in een date?"
-                              required></textarea>
+                              required disabled></textarea>
                 </div>
                 <div class="form-group">
-                    <input class="btn btn-primary" type="submit" name="submitButton" value="Verzend"/>
+                    <input class="btn btn-primary" type="submit" name="submitButton" value="Verzend" disabled/>
                 </div>
                 </form>
 
